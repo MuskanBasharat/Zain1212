@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className='footer'> 
     <div className="footer-container"><div className='footer-left'>
-      <img src={logo} alt='logo' className='footer-logo'/>
+       <a href='/'><img src={logo} alt='logo' className='footer-logo'/></a>
             <h3 className='footer-text'>Zain Basharat Ali<br/> Flutter APP Developer</h3>
              </div>
              <div className='footer-right'>

@@ -338,6 +338,25 @@ body:not(:target) .scroll-to-top {
 .scroll-button{
     font-size: 20px;
 }
+.text-green-600 ,.text-red-600{
+    margin: 30px 0px 0px;
+}
+.hire-btn{
+    text-decoration: none;
+}
+.links-email{
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.card-footer{
+    
+    text-align: center;
+}
+.description{
+    font-size: 17px;
+}
 @media (max-width:1246px) {
     .heading-h2{
         font-size: 24px;
@@ -383,11 +402,15 @@ body:not(:target) .scroll-to-top {
     .list{
         display: none;
     }
-   
+   .card-footer{
+    margin-top: 0px;
+}
    .intro{
     margin: 130px 24px 0px ;
    }
-    
+    .description{
+        font-size: 14px;
+    }
     .font-bold{
         font-size: 48px;
     }
@@ -410,7 +433,7 @@ body:not(:target) .scroll-to-top {
     }
     
 }
-@media (max-width:1040px) {
+@media (max-width:1055px) {
     .images{
     width: 50%;
     height: 609px;
@@ -423,8 +446,32 @@ body:not(:target) .scroll-to-top {
 .pro-text{
     padding: 0px 12px;
 }
+ .card-heading{
+        font-size: 22px;
+    }
+    .card{
+        width: 350px;
+        height: 450px;
+        padding: 10px;
+    }
+    .pro-text{
+        padding: 0px 20px;
+    }
 }
 
+@media (max-width:870px) {
+     .card-heading{
+        font-size: 22px;
+    }
+    .card{
+        width: 350px;
+        height: 480px;
+        padding: 10px;
+    }
+    .cards{
+        gap: 10px;
+    }
+}
 
 @media (max-width:768px) {
 
@@ -451,6 +498,7 @@ body:not(:target) .scroll-to-top {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
     }
     .hire{
         margin-bottom: 20px;
@@ -583,4 +631,216 @@ body:not(:target) .scroll-to-top {
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Overlay ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+/* ===== Widget Box ===== */
+.popup-widget {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Close Button ===== */
+.popup-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 20px;
+  color: #666;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.popup-close-btn:hover {
+  color: #000;
+}
+
+/* ===== Loading Splash ===== */
+.popup-splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.popup-splash-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.popup-dots {
+  display: flex;
+  gap: 6px;
+}
+.popup-dots span {
+  width: 8px;
+  height: 8px;
+  background: #444;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+.popup-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.popup-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.7); }
+  40% { transform: scale(1); }
+}
+
+/* ===== Main Content ===== */
+.popup-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.popup-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.popup-content p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.popup-content img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Profile Image ===== */
+.popup-profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 10px auto 15px;
+}
+
+/* ===== Divider ===== */
+.popup-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+/* ===== Calendar ===== */
+.calendar-container {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Time Slots ===== */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.time-slot {
+  padding: 0.5rem 0.75rem;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.time-slot:hover {
+  background: #efefef;
+}
+.time-slot.selected {
+  background: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+
+/* ===== Form ===== */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+.booking-form input,
+.booking-form select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+.booking-form button {
+  background: #4f46e5;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.booking-form button:hover {
+  background: #4338ca;
+}
+
+/* ===== Success Screen ===== */
+.success-screen {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.success-screen h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.success-screen p {
+  font-size: 15px;
+  color: #444;
 }

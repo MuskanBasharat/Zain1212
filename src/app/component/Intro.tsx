@@ -8,7 +8,7 @@ export const Intro = () => {
         <p className='text-p'>Hi, My Name is Zain Ali.</p>
         <h1 className="font-bold">I build Mobile Apps for Android & iOS</h1>
         <p className="text-p">I am specialized in developing mobile apps for Android & iOS using Flutter for disruptive businesses.</p>
-        <div className='hire-btn'><Button className='hire'>Hire Me For</Button>  </div>
+        <a href="#work" className='hire-btn'><Button className='hire'>Hire Me For</Button>  </a>
             
          
         </div>
